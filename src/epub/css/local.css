@@ -1,2 +1,74 @@
 @charset "utf-8";
 @namespace epub "http://www.idpf.org/2007/ops";
+
+article,
+section{
+	page-break-after: always;
+}
+
+[epub|type~="z3998:poem"] p{
+	text-align: initial;
+	text-indent: 0;
+}
+
+[epub|type~="z3998:poem"] p + p{
+	margin-top: 1em;
+}
+
+[epub|type~="z3998:poem"] p > span{
+	display: block;
+	text-indent: -1em;
+	padding-left: 1em;
+}
+
+[epub|type~="z3998:poem"] p > span + br{
+	display: none;
+}
+
+p span.i1{
+	text-indent: -1em;
+	padding-left: 2em;
+}
+
+p span.i2{
+	text-indent: -1em;
+	padding-left: 3em;
+}
+
+p span.i3{
+	text-indent: -1em;
+	padding-left: 4em;
+}
+
+p span.i4{
+	text-indent: -1em;
+	padding-left: 5em;
+}
+
+p span.i5{
+	text-indent: -1em;
+	padding-left: 6em;
+}
+
+.signature{
+	text-align: right;
+}
+
+[epub|type~="z3998:poem"] header > h2{
+	margin-bottom: 0;
+}
+
+[epub|type~="z3998:poem"] header > p{
+	text-align: center;
+}
+
+#epitaph-in-a-church-yard-in-charleston-south-carolina  header > blockquote{
+	font-variant: small-caps;
+	text-align: center;
+	color:red;
+}
+
+[epub|type~="z3998:poem"] [epub|type~="z3998:dedication"]{
+	text-align: center;
+	font-variant: small-caps;
+}
